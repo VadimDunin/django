@@ -4,8 +4,15 @@ from django.http import HttpResponse, HttpResponseNotFound, Http404
 # Create your views here.
 
 
+
 def index(request):
-    return HttpResponse("Страница приложения women")
+    #return HttpResponse("Страница приложения women")
+    return render(request, 'women/index.html', {'title' : 'Главная страница'})
+
+
+def about(request):
+    #return HttpResponse("Страница приложения women")
+    return render(request, 'women/about.html', {'title': 'О сайте'})
 
 
 def categories(request, cat):
