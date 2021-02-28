@@ -13,7 +13,7 @@ def index(request):
 
 def about(request):
     #return HttpResponse("Страница приложения women")
-    return render(request, 'women/about.html', {'title': 'О сайте'})
+    return render(request, 'women/about.html', {'menu': menu, 'title': 'О сайте'})
 
 
 def categories(request, cat):
