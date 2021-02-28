@@ -3,11 +3,12 @@ from django.http import HttpResponse, HttpResponseNotFound, Http404
 
 # Create your views here.
 
+menu = ["О Сайте", "Добавить статью", "Обратная связь", "Войти"]
 
 
 def index(request):
     #return HttpResponse("Страница приложения women")
-    return render(request, 'women/index.html', {'title' : 'Главная страница'})
+    return render(request, 'women/index.html', {'menu': menu, 'title': 'Главная страница'})
 
 
 def about(request):
